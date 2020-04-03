@@ -2,17 +2,29 @@
   "name": "eslint-plugin-dirnames",
   "version": "1.0.0",
   "description": "Eslint rule for consistent dirnames",
+  "author": "Good guys from Alfa-Bank",
+  "bugs": {
+    "url": "https://github.com/alfa-laboratory/eslint-plugin-dirnames/issues"
+  },
+  "license": "ISC",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfa-laboratory/eslint-plugin-dirnames.git"
+  },
   "scripts": {
     "test": "jest .",
-    "coverage": "jest . --coverage"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^25.2.7"
+    "coverage": "jest . --coverage",
+    "release-patch": "npm version patch -m 'chore(*): patch version'",
+    "release-minor": "npm version minor -m 'chore(*): minor version'",
+    "release-major": "npm version major -m 'chore(*): major version'",
+    "postversion": "git push origin master && git push --tags && npm run pub",
+    "pub": "npm publish"
   },
   "dependencies": {
     "lodash.kebabcase": "^4.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.2.7"
   }
 }
