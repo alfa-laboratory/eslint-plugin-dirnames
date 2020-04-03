@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-dirnames",
   "version": "1.0.0",
-  "description": "Eslint rule for consistent dirnames.",
+  "description": "Eslint rule for consistent dirnames",
   "main": "index.js",
   "scripts": {
     "test": "jest .",
