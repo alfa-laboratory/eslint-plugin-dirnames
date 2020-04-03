@@ -1,0 +1,36 @@
+"use strict";
+
+var matchKebabCaseRule = require("../../../lib/rules/match-kebab-case");
+var RuleTester = require("eslint").RuleTester;
+
+var ruleTester = new RuleTester();
+
+ruleTester.run("match-kebab-case", matchKebabCaseRule, {
+    valid: [
+        {
+            code: "",
+            filename: "/foo/bar.js"
+        },
+        {
+            code: "",
+            filename: "/foo-bar/bar.js"
+        }
+    ],
+    invalid: [
+        {
+            code: "",
+            filename: "/foo-/bar.js",
+            errors: [
+                { message: 'Dirname "foo-" does not match the naming convention "kebab-case"'}
+            ]
+        },
+        {
+            code: "",
+            filename: "/foo-/bar-/bar.js",
+            errors: [
+                { message: 'Dirname "foo-" does not match the naming convention "kebab-case"'},
+                { message: 'Dirname "bar-" does not match the naming convention "kebab-case"'}
+            ]
+        },
+    ]
+});
