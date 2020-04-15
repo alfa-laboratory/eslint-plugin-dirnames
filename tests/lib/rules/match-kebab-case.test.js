@@ -13,8 +13,8 @@ ruleTester.run("match-kebab-case", matchKebabCaseRule, {
         },
         {
             code: "",
-            filename: "/foo-bar/bar.js"
-        }
+            filename: "/foo-bar1/bar.js"
+        },
     ],
     invalid: [
         {
