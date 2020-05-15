@@ -19,17 +19,17 @@ ruleTester.run("match-kebab-case", matchKebabCaseRule, {
     invalid: [
         {
             code: "",
-            filename: "/foo-/bar.js",
+            filename: "/fooBar/bar.js",
             errors: [
-                { message: 'Dirname "foo-" does not match the naming convention "kebab-case". Rename it to "foo"'}
+                { message: 'Dirname "fooBar" does not match the naming convention "kebab-case". Rename it to "foo-bar"'}
             ]
         },
         {
             code: "",
-            filename: "/foo-/bar-/bar.js",
+            filename: "/fooBar/barBazz/bar.js",
             errors: [
-                { message: 'Dirname "foo-" does not match the naming convention "kebab-case". Rename it to "foo"'},
-                { message: 'Dirname "bar-" does not match the naming convention "kebab-case". Rename it to "bar"'}
+                { message: 'Dirname "fooBar" does not match the naming convention "kebab-case". Rename it to "foo-bar"'},
+                { message: 'Dirname "barBazz" does not match the naming convention "kebab-case". Rename it to "bar-bazz"'}
             ]
         },
     ]
