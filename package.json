@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-dirnames",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Eslint rule for consistent dirnames",
   "author": "Good guys from Alfa-Bank",
   "bugs": {
